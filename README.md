@@ -4,12 +4,6 @@
 
 <strong>A Rust and WebAssembly implementation of the smashing hit, Game of life, using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
 
-  <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
-    <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
-  </h3>
-
 <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
 
 </div>
