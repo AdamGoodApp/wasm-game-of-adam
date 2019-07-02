@@ -28,10 +28,10 @@ wasm-pack build
 wasm-pack test --headless --firefox
 ```
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+### 🎁 Run locally `in /www`
 
 ```
-wasm-pack publish
+npm run start
 ```
 
 ## 🔋 Batteries Included
