@@ -36,11 +36,11 @@ pub struct Universe {
 /// Public methods, exported to JavaScript.
 #[wasm_bindgen]
 impl Universe {
-  pub fn new() -> Universe {
+  pub fn new(width: u32, height: u32) -> Universe {
     utils::set_panic_hook();
 
-    let width = 64;
-    let height = 64;
+    let width = width;
+    let height = height;
 
     let cells = (0..width * height)
       .map(|_i| {
