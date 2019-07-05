@@ -146,9 +146,9 @@ canvas.addEventListener("click", event => {
   drawCells();
 });
 
-// var sound = new Howl({
-//   src: ["./sound/game-of-adz.mp3"],
-//   autoplay: true,
-//   loop: true,
-//   volume: 0.8
-// });
+var sound = new Howl({
+  src: ["./sound/game-of-adz.mp3"],
+  autoplay: true,
+  loop: true,
+  volume: 0.8
+});
