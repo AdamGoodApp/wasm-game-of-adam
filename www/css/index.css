@@ -22,3 +22,10 @@ canvas#game-of-life-canvas {
     /* outer white */ -10px 0 80px #f0f,
     /* outer left magenta */ 10px 0 80px #0ff; /* outer right cyan */
 }
+
+h1 {
+  font-family: "Rubik Mono One", sans-serif;
+  color: #fff;
+  margin-top: 90px;
+  cursor: pointer;
+}

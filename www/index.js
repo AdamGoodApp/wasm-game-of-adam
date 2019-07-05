@@ -73,10 +73,6 @@ const renderLoop = () => {
   drawGrid();
   drawCells();
 
-  // setTimeout(function() {
-  //   animationId = requestAnimationFrame(renderLoop);
-  // }, 30);
-
   animationId = requestAnimationFrame(renderLoop);
 };
 
@@ -87,12 +83,12 @@ const isPaused = () => {
 };
 
 const play = () => {
-  playPauseButton.textContent = "⏸";
+  playPauseButton.textContent = "PAUSE";
   renderLoop();
 };
 
 const pause = () => {
-  playPauseButton.textContent = "▶";
+  playPauseButton.textContent = "PLAY";
   cancelAnimationFrame(animationId);
   animationId = null;
 };
@@ -108,9 +104,26 @@ playPauseButton.addEventListener("click", event => {
 // Start the rendering process
 play();
 
-// window.addEventListener("click", function(event) {
-//   renderLoop();
-// });
+// listen to click events on the < canvas > element, translate the click event's page-relative coordinates
+// into canvas-relative coordinates, and then into a row and column,
+// invoke the toggle_cell method, and finally redraw the scene.
+canvas.addEventListener("click", event => {
+  const boundingRect = canvas.getBoundingClientRect();
+
+  const scaleX = canvas.width / boundingRect.width;
+  const scaleY = canvas.height / boundingRect.height;
+
+  const canvasLeft = (event.clientX - boundingRect.left) * scaleX;
+  const canvasTop = (event.clientY - boundingRect.top) * scaleY;
+
+  const row = Math.min(Math.floor(canvasTop / (CELL_SIZE + 1)), height - 1);
+  const col = Math.min(Math.floor(canvasLeft / (CELL_SIZE + 1)), width - 1);
+
+  universe.toggle_cell(row, col);
+
+  drawGrid();
+  drawCells();
+});
 
 var sound = new Howl({
   src: ["./sound/game-of-adz.mp3"],
