@@ -1,7 +1,10 @@
 import { Universe, Cell } from "wasm-game-of-adz";
 import { memory } from "wasm-game-of-adz/wasm_game_of_adz_bg";
 
-const universe = Universe.new(32, 32);
+const windowWidth = 64;
+const windowHeight = 64;
+
+const universe = Universe.new(windowWidth, windowHeight);
 const width = universe.width();
 const height = universe.height();
 
@@ -146,9 +149,9 @@ canvas.addEventListener("click", event => {
   drawCells();
 });
 
-var sound = new Howl({
-  src: ["./sound/game-of-adz.mp3"],
-  autoplay: true,
-  loop: true,
-  volume: 0.8
-});
+// var sound = new Howl({
+//   src: ["./sound/game-of-adz.mp3"],
+//   autoplay: true,
+//   loop: true,
+//   volume: 0.8
+// });
