@@ -1,10 +1,7 @@
 import { Universe, Cell } from "wasm-game-of-adz";
 import { memory } from "wasm-game-of-adz/wasm_game_of_adz_bg";
 
-const windowWidth = 64;
-const windowHeight = 64;
-
-const universe = Universe.new(windowWidth, windowHeight);
+const universe = Universe.new(90, 90);
 const width = universe.width();
 const height = universe.height();
 
