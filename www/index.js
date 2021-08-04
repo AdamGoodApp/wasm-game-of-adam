@@ -104,7 +104,7 @@ const isPaused = () => {
 };
 
 const play = () => {
-  playPauseButton.textContent = "PAUSE";
+  playPauseButton.textContent = "";
   renderLoop();
 };
 
